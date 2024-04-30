@@ -63,7 +63,7 @@ export default function Home() {
         clearTimeout(idleLogoutTimer);
       };
     }
-  }, [isLoggedIn]);
+  }, [isLoggedIn, router]);
 
   // This useEffect is written to session logout mechanism
   useEffect(() => {
@@ -102,7 +102,7 @@ export default function Home() {
       return () => clearTimeout(sessionTimer);
     
     }
-  }, []);
+  }, [isLoggedIn, router]);
 
 
   return (

@@ -28,7 +28,7 @@ const LoginWithContainer: React.FC<LoginWithContainerProps> = ({}) => {
     if (user.isLoggedIn) {
       router.push("/");
     }
-  }, [user]);
+  }, [user, router]);
 
   return (
     <div className="shadow-xl px-12 rounded-2xl border border-gray-200 flex items-center justify-start gap-5 flex-col pt-8 pb-14">
@@ -41,7 +41,6 @@ const LoginWithContainer: React.FC<LoginWithContainerProps> = ({}) => {
             icon={icon}
             text={text}
             handleOnClick={() => handleLogin(id)}
-            iconPos="start"
             className="!w-fit md:!w-full !px-8 p-2 text-black border-black rounded-xl gap-x-3"
           />
         );
