@@ -19,12 +19,12 @@ const NavBar: React.FC<NavBarProps> = ({ navItems }) => {
   };
 
   return (
-    <div className=" h-20 bg-gray-300 flex w-full justify-between items-center px-3 md:px-8">
+    <div className="h-20 bg-gray-300 flex w-full justify-between items-center px-3 md:px-8">
       <Link href={"/"}>
         <h1 className=" text-2xl">Next Auth</h1>
       </Link>
       <nav>
-        <div className="hidden md:flex gap-5 items-center">
+        <div className="md:flex gap-5 items-center">
           {navItems &&
             navItems?.map(({ text, link }) => (
               <Link href={link} key={text}>

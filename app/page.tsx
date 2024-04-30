@@ -108,8 +108,12 @@ export default function Home() {
   return (
     <HomeLayout>
       <h1 className="pt-8 text-xl">Home Page</h1>
-      <h1 className="pt-8 text-normal">Name: {name}</h1>
-      <h1 className="pt-8 text-normal">Email: {email}</h1>
+      { isLoggedIn && <>
+          <h1 className="pt-8 text-normal">Name: {name}</h1>
+          <h1 className="pt-8 text-normal">Email: {email}</h1>
+        </>
+      }
+      
     </HomeLayout>
   );
 }
